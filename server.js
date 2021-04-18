@@ -4,15 +4,6 @@ const mongoose = require("mongoose");
 const compression = require("compression"); 
 const PORT = 3000;
 
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://BrunoBorges:Tz7v5rgmh2EdI67j@cluster0.zg8iv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority?authSource=admin";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
-
 const app = express();
 
 app.use(logger("dev"));
